@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Dark mode - Polking Theme */
+    --background: 240 30% 5%;
+    --foreground: 210 40% 98%;
+
+    --card: 240 30% 8%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 240 30% 8%;
+    --popover-foreground: 210 40% 98%;
+
+    /* Polking Gold */
+    --primary: 41 100% 50%;
+    --primary-foreground: 222 47% 11%;
+
+    /* Polking Purple */
+    --secondary: 275 100% 60%;
+    --secondary-foreground: 210 40% 98%;
+
+    /* Burgundy */
+    --accent: 345 83% 41%;
+    --accent-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 41 100% 50%;
+
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-normal;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-normal;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /* Tech Polking Gradients */
+  .tech-polking-dark {
+    background: linear-gradient(180deg, hsl(240, 30%, 5%) 0%, hsl(275, 30%, 10%) 100%);
+  }
+
+  /* Text Gradient */
+  .text-gradient-gold {
+    background: linear-gradient(to right, #facc15, #eab308, #a58af8);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
